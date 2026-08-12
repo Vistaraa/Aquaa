@@ -25,12 +25,22 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    # Provide sdkmanager and Android SDK tooling
+    - name: Set up Android SDK (provides sdkmanager)
+      uses: android-actions/setup-android@v3
+
+    - name: Install Android SDK components and accept licenses
+      run: |
+        # Install platform tools, the platform and build-tools your project needs.
+        # Adjust API level / build-tools version to match your project (e.g. android-33 / 33.0.2).
+        yes | sdkmanager --licenses
+        sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.2"
+
     - name: Generate Gradle Wrapper
-      run: gradle wrapper
+      run: ./gradlew wrapper
 
     - name: Build with Gradle
-      run: |
-        ./gradlew assembleDebug --no-daemon > build.log 2>&1 || (cat build.log | grep -iE "e: |error|unresolved|exception|fail" | head -n 50 && exit 1)
+      run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
