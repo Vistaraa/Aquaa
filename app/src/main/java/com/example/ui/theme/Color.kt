@@ -38,6 +38,10 @@ val StatusPickedUp = Color(0xFF7C5A9F)        // Muted Purple
 val StatusOutForDelivery = Color(0xFF3E8D7F)  // Sage Green
 val StatusDelivered = Color(0xFF2E7D32)       // Forest Green
 val StatusCancelled = Color(0xFFC62828)       // Dark Crimson Red
-
-
-
+// Legacy color token aliases mapping to new retro-utility tokens (used in AuthScreens.kt)
+val AquaPrimary = AquaTeal
+val AquaSecondary = AquaOchre
+val AquaOnBackground = AquaCharcoal
+val AquaBackground = AquaCanvasBg
+val GlassBorderWhite = Color(0xFFFFFFFF).copy(alpha = 0.3f)
+val GlassSurfaceWhite = Color(0xFFFFFFFF).copy(alpha = 0.15f)
