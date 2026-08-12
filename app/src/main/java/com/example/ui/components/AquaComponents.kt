@@ -669,9 +669,10 @@ fun SellerCard(
                         contentAlignment = Alignment.Center
                     ) {
                         val progressFraction = 0.84f // Custom percentage
+                        val outlineColor = MaterialTheme.colorScheme.outline
                         Canvas(modifier = Modifier.fillMaxSize()) {
                             drawCircle(
-                                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                                color = outlineColor.copy(alpha = 0.3f),
                                 style = Stroke(width = 4f)
                             )
                             drawArc(
@@ -882,9 +883,10 @@ fun WaterJugCard(
                         contentAlignment = Alignment.Center
                     ) {
                         val progressFraction = 0.88f // Stock fill fraction
+                        val outlineColor = MaterialTheme.colorScheme.outline
                         Canvas(modifier = Modifier.fillMaxSize()) {
                             drawCircle(
-                                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                                color = outlineColor.copy(alpha = 0.3f),
                                 style = Stroke(width = 4f)
                             )
                             drawArc(

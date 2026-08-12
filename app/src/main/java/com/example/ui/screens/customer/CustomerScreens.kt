@@ -461,9 +461,10 @@ fun SellerDetailScreen(
                                         contentAlignment = Alignment.Center
                                     ) {
                                         val progressFraction = 0.84f // Mock live tank fill
+                                        val outlineColor = MaterialTheme.colorScheme.outline
                                         Canvas(modifier = Modifier.fillMaxSize()) {
                                             drawCircle(
-                                                color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                                                color = outlineColor.copy(alpha = 0.3f),
                                                 style = Stroke(width = 3.5f)
                                             )
                                             drawArc(
@@ -937,9 +938,10 @@ fun OrderDetailProgressCard(
                 modifier = Modifier.size(130.dp),
                 contentAlignment = Alignment.Center
             ) {
+                val outlineColor = MaterialTheme.colorScheme.outline
                 Canvas(modifier = Modifier.fillMaxSize()) {
                     drawCircle(
-                        color = MaterialTheme.colorScheme.outline.copy(alpha = 0.3f),
+                        color = outlineColor.copy(alpha = 0.3f),
                         style = Stroke(width = 12f)
                     )
                     drawArc(
