@@ -31,12 +31,15 @@ android {
       keyAlias = "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
     }
+    // Commented out custom debugConfig to prevent validateSigningDebug task from failing on missing debug.keystore file
+    /*
     create("debugConfig") {
       storeFile = file("${rootDir}/debug.keystore")
       storePassword = "android"
       keyAlias = "androiddebugkey"
       keyPassword = "android"
     }
+    */
   }
 
   buildTypes {
