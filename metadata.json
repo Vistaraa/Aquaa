@@ -1,0 +1,6 @@
+{
+  "name": "AquaConnect",
+  "description": "Hyperlocal water jug delivery marketplace connecting sellers and customers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
